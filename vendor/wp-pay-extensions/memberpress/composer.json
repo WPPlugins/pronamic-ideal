@@ -1,0 +1,44 @@
+{
+	"name": "wp-pay-extensions/memberpress",
+	"description": "MemberPress driver for the WordPress payment processing library.",
+	"keywords": ["wordpress", "wp", "pay", "memberpress", "extension", "pronamic"],
+	"homepage": "http://www.wp-pay.org/extensions/memberpress/",
+	"license": "GPL-3.0+",
+	"authors": [
+		{
+			"name": "Pronamic",
+			"email": "info@pronamic.eu",
+			"homepage": "http://www.pronamic.eu/",
+			"role": "Company"
+		},
+		{
+			"name": "Remco Tolsma",
+			"email": "info@remcotolsma.nl",
+			"homepage": "http://www.remcotolsma.nl/",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "support@wp-pay.org",
+		"issues": "https://github.com/wp-pay-extensions/memberpress/issues",
+		"source": "https://github.com/wp-pay-extensions/memberpress"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"require": {
+		"php": ">=5.2.4",
+		"wp-pay/core": "^1.3"
+	},
+	"require-dev": {
+		"satooshi/php-coveralls": "dev-master",
+		"squizlabs/php_codesniffer": "^2.7",
+		"wp-coding-standards/wpcs": "^0.10.0",
+		"phpmd/phpmd": "^2.4"
+	},
+    "scripts": {
+        "post-autoload-dump": [
+            "if [[ -d vendor/wp-coding-standards/wpcs ]]; then vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs; fi"
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+{
+	"name": "wp-pay-extensions/classipress",
+	"description": "ClassiPress driver for the WordPress payment processing library.",
+	"keywords": ["wordpress", "wp", "pay", "classipress", "extension", "pronamic"],
+	"homepage": "http://www.wp-pay.org/extensions/classipress/",
+	"license": "GPL-3.0+",
+	"authors": [
+		{
+			"name": "Pronamic",
+			"email": "info@pronamic.eu",
+			"homepage": "http://www.pronamic.eu/",
+			"role": "Company"
+		},
+		{
+			"name": "Remco Tolsma",
+			"email": "info@remcotolsma.nl",
+			"homepage": "http://www.remcotolsma.nl/",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "support@wp-pay.org",
+		"issues": "https://github.com/wp-pay-extensions/classipress/issues",
+		"source": "https://github.com/wp-pay-extensions/classipress"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"config": {
+		"platform": {
+			"php": "5.3.3"
+		}
+	},
+	"require": {
+		"php": "^5.3",
+		"wp-pay/core": "^1.0.2"
+	},
+	"require-dev": {
+		"satooshi/php-coveralls": "^1.0",
+		"squizlabs/php_codesniffer": "^2.7",
+		"wp-coding-standards/wpcs": "^0.10.0"
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"if [ -d vendor/wp-coding-standards/wpcs ]; then vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs; fi"
+		]
+	}
+}
